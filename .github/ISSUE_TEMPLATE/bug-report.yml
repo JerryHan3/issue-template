@@ -1,0 +1,82 @@
+name: Report bugs
+description: Use this form if you want to report a bug.
+labels: ["type:bug"]
+title: "[Bug] "
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Sorry that you encountered a bug in this software. To help us fix the bug more efficiently, please make sure that:
+
+        * You have checked the Issue section, and there's no similar bug reports.
+        * You have confirmed that there's no misconfigured settings (e.g. device is muted/lost connection to Internet).
+        * You are using a supported version of this software.
+
+        Please be aware that duplicated or invalid reports - e.g. bugs can't be reproduced, unsupported version, irrelavent issues - will be closed. 
+  - type: checkboxes
+    id: notice-verify
+    attributes:
+      label: Check station
+      options: 
+        - label: I have read and fully understand the notice above.
+          required: true
+  - type: input
+    id: version
+    validations:
+      required: true
+    attribute:
+      label: Software Version
+      description: "Which version of this software are you using?"
+  - type: input
+    id: system
+    attribute:
+      label: System
+      description: "Which operating system are you using? Provide the OS version number too."
+      placeholder: "Windows 11 26H2 / macOS 26.7.1 / Ubuntu 24.04 / etc."
+  - type: textarea
+    id: content
+    attributes:
+      label: Bug Description
+      description: "Describe the bug here."
+      placeholder: Tell us what did you want to do, and what unexpected thing happened.
+    validations:
+      required: true
+  - type: dropdown
+    id: Frequency
+    validations:
+      required: true
+    attribute:
+      label: Frequency
+      description: "How often do you encounter this bug?"
+      options:
+        - Always
+        - Sometimes
+        - Seldom
+        - Cannot reproduce
+        - Not tested
+  - type: textarea
+    id: reproduce-step
+    attributes:
+      label: Reproduce Steps
+      description: "Show us how to reproduce the bug you encountered."
+      placeholder: |
+        1. 
+        2. 
+        3. 
+        ...
+  - type: textarea
+    id: log
+    attributes:
+      label: Log
+      description: "Paste the software log / crash report here for us to diagnose."
+      render: plaintext
+  - type: textarea
+    id: note
+    attributes:
+      label: Additional note
+      description: "Tell us anything you want us to know. You may also upload screenshot here."
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for filling out this form and help us make this software better. Github will notify you about the progress of your issue via your email, please check your inbox occasionally. We will contact you if needed.
