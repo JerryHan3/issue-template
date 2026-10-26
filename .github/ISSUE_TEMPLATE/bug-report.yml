@@ -25,12 +25,12 @@ body:
     id: version
     validations:
       required: true
-    attribute:
+    attributes:
       label: Software Version
       description: "Which version of this software are you using?"
   - type: input
     id: system
-    attribute:
+    attributes:
       label: System
       description: "Which operating system are you using? Provide the OS version number too."
       placeholder: "Windows 11 26H2 / macOS 26.7.1 / Ubuntu 24.04 / etc."
@@ -46,7 +46,7 @@ body:
     id: Frequency
     validations:
       required: true
-    attribute:
+    attributes:
       label: Frequency
       description: "How often do you encounter this bug?"
       options:
