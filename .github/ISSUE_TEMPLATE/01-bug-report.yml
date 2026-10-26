@@ -50,11 +50,11 @@ body:
       label: Frequency
       description: "How often do you encounter this bug?"
       options:
+        - Not tested
         - Always
         - Sometimes
         - Seldom
         - Cannot reproduce
-        - Not tested
   - type: textarea
     id: reproduce-step
     attributes:
